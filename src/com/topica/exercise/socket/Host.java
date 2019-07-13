@@ -37,7 +37,7 @@ public class Host {
                 // get file name from client
                 DataInputStream in = new DataInputStream(is);
                 String fileName = in.readUTF();
-                fileName = "ouput" + getFileExtension(fileName);
+                fileName = (new StringBuffer()).append("ouput").append(getFileExtension(fileName)).toString();
                 file = new File(fileName);
                 fos = new FileOutputStream(file);
 
